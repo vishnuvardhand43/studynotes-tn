@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ta" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyNotes TN | தமிழ்நாடு பள்ளி மாணவர்களுக்கான இலவச கற்றல் தளம்</title>
+  <meta name="description" content="Tamil Nadu State Board (Samacheer Kalvi) Class 6 to 12 Notes, Previous Year Question Papers (2019-2025), Important Questions and Syllabus PDFs.">
+
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Motivational Bilingual Ticker -->
+  <aside class="announcement-bar" aria-label="Motivational Ticker">
+    <div class="container">
+      <div class="ticker-content" id="tickerQuote">
+        <span class="ticker-tag">தினமும் ஒரு சிந்தனை</span>
+        <span class="ticker-quote">"முயற்சி திருவினையாக்கும் - திருவள்ளுவர்" (Consistent practice brings top marks in public exams!)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-wrap" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <div class="brand-logo" id="homeBrandBtn" title="Go to StudyNotes Homepage">
+          <div class="logo-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="brand-text">
+            <h1>Study<span>Notes</span> <span class="tn-badge">TN Board</span></h1>
+            <p class="brand-subtitle">தமிழ்நாடு பள்ளி கல்வி • சமச்சீர் கல்வி</p>
+          </div>
+        </div>
+
+        <!-- Header Actions: Bookmarks & Dark Mode Toggle -->
+        <div class="header-actions">
+          <button class="action-btn bookmarks-btn" id="openBookmarksBtn" title="Saved Notes & Papers">
+            <i class="fa-solid fa-bookmark"></i>
+            <span>Saved <span class="badge-count" id="bookmarkCount">0</span></span>
+          </button>
+          
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Dark / Light Mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Smart Instant Search Bar -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-pill">
+        <i class="fa-solid fa-fire"></i>
+        <span>Samacheer Kalvi • 2024-2025 Updated Syllabus & Papers</span>
+      </div>
+
+      <h2 class="hero-title">
+        படிப்பு சுலபம், <span class="gradient-text">வெற்றி நிச்சயம்!</span>
+      </h2>
+      <p class="hero-desc">
+        Tamil, English, Maths, Science & Social Science - Class 6 to 12 Chapter Notes, 2019-2025 PYQs with Answer Keys & Important Golden Questions!
+      </p>
+
+      <!-- Search Bar (Subject, Chapter nu thedina odane varanum) -->
+      <div class="search-wrapper">
+        <div class="search-bar-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input 
+            type="text" 
+            id="globalSearchInput" 
+            class="search-input" 
+            placeholder="Search Subject, Chapter, Topic or Year (எ.கா: 10th Maths, Relations, 2024 Paper)..." 
+            autocomplete="off"
+          >
+          <button class="search-clear-btn" id="searchClearBtn" title="Clear Search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="search-submit-btn" id="searchBtn">
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>தேடு</span>
+          </button>
+        </div>
+
+        <!-- Live Instant Search Dropdown Results -->
+        <div class="search-results-dropdown" id="searchDropdown">
+          <div class="search-dropdown-header">
+            <span>தேடல் முடிவுகள் (Matching Notes & Papers)</span>
+            <span id="searchResultCount">0 items found</span>
+          </div>
+          <div class="search-results-list" id="searchResultsList">
+            <!-- Dynamically injected search matches -->
+          </div>
+        </div>
+
+        <!-- Quick Trending Search Filter Tags -->
+        <div class="quick-tags">
+          <span class="tag-label">விரைவு தேடல்:</span>
+          <button class="filter-chip" data-search="12th Physics Electrostatics">12th Physics</button>
+          <button class="filter-chip" data-search="12th Chemistry Metallurgy">12th Chemistry</button>
+          <button class="filter-chip" data-search="12th Computer Science Python">12th Computer Science</button>
+          <button class="filter-chip" data-search="10th Maths Relations">10th Maths</button>
+          <button class="filter-chip" data-search="2024 Public Question Paper">2024 Public Papers</button>
+          <button class="filter-chip" data-search="Thales Theorem 5 Marks">Thales Theorem</button>
+          <button class="filter-chip" data-search="10th Science Laws of Motion">10th Science</button>
+          <button class="filter-chip" data-search="Life Memory Poem">Life Memory Poem</button>
+        </div>
+      </div>
+
+      <!-- Feature Highlights Bar -->
+      <div class="highlights-bar">
+        <div class="highlight-item">
+          <div class="highlight-icon icon-blue">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div class="highlight-text">
+            <h4>Free Chapter PDF Notes</h4>
+            <p>Downloadable & Print-Ready</p>
+          </div>
+        </div>
+
+        <div class="highlight-item">
+          <div class="highlight-icon icon-green">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div class="highlight-text">
+            <h4>2019 to 2025 PYQs</h4>
+            <p>Official Papers + Solved Keys</p>
+          </div>
+        </div>
+
+        <div class="highlight-item">
+          <div class="highlight-icon icon-orange">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="highlight-text">
+            <h4>Important Questions</h4>
+            <p>2M, 3M, 5M & 8M Golden Qs</p>
+          </div>
+        </div>
+
+        <div class="highlight-item">
+          <div class="highlight-icon icon-purple">
+            <i class="fa-solid fa-language"></i>
+          </div>
+          <div class="highlight-text">
+            <h4>Tamil + English Mix</h4>
+            <p>மாணவர்களுக்கு எளிய விளக்கம்</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main View Container -->
+  <main class="main-view-container container">
+    
+    <!-- ========================================================
+         VIEW A: HOMEPAGE SUBJECT CARDS (Tamil, English, Maths, Science, Social)
+         ======================================================== -->
+    <section class="home-subjects-section" id="homeSubjectsSection">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2>
+            <i class="fa-solid fa-shapes text-primary"></i> 
+            பாடங்களைத் தேர்ந்தெடுக்கவும் (Choose Subject)
+          </h2>
+          <p>Physics, Chemistry, Computer Science, Maths, Tamil, English, Biology, Social Science & Commerce (Class 6 - 12)</p>
+        </div>
+      </div>
+
+      <!-- Subject Stream / Category Filter Tabs -->
+      <div class="subject-stream-filters" id="subjectStreamFilters">
+        <button class="stream-filter-btn active" data-category="all">
+          <i class="fa-solid fa-border-all"></i> அனைத்து பாடங்கள் (All Subjects)
+        </button>
+        <button class="stream-filter-btn" data-category="science">
+          <i class="fa-solid fa-atom"></i> Science & Tech (Physics, Chem, CS, Bio)
+        </button>
+        <button class="stream-filter-btn" data-category="maths">
+          <i class="fa-solid fa-calculator"></i> Mathematics (கணிதம்)
+        </button>
+        <button class="stream-filter-btn" data-category="languages">
+          <i class="fa-solid fa-language"></i> மொழிகள் (Tamil & English)
+        </button>
+        <button class="stream-filter-btn" data-category="social">
+          <i class="fa-solid fa-landmark"></i> Social & Commerce (சமூக அறிவியல் & வணிகவியல்)
+        </button>
+      </div>
+
+      <!-- Grid of Subjects -->
+      <div class="subjects-grid" id="subjectsGrid">
+        <!-- Rendered via JavaScript from studyData.subjects -->
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         VIEW B: SUBJECT & CLASS EXPLORER VIEW (Class 6 to 12)
+         ======================================================== -->
+    <section class="subject-view-wrap" id="subjectDetailSection">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="javascript:void(0)" id="breadcrumbHome">
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+        <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span id="breadcrumbSubject" class="breadcrumb-current">Mathematics</span>
+        <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span id="breadcrumbClass" class="breadcrumb-current">Class 10</span>
+      </nav>
+
+      <!-- Subject Header Card -->
+      <div class="subject-banner" id="subjectBanner">
+        <div class="banner-left">
+          <div class="banner-icon-box" id="bannerIcon">
+            <i class="fa-solid fa-calculator"></i>
+          </div>
+          <div class="banner-titles">
+            <h2 id="bannerSubjectName">Mathematics</h2>
+            <div class="banner-tamil-title" id="bannerTamilName">கணிதம்</div>
+            <p class="banner-sub" id="bannerSubjectDesc">
+              Class 6 to 12 Notes, 2019-2025 Previous Papers & Important Golden Questions
+            </p>
+          </div>
+        </div>
+        <div class="banner-right">
+          <button class="action-btn" id="backToSubjectsBtn">
+            <i class="fa-solid fa-arrow-left"></i> All Subjects
+          </button>
+        </div>
+      </div>
+
+      <!-- Class Selector Navigation Bar: Class 6 to Class 12 -->
+      <div class="class-selector-section">
+        <div class="class-selector-title">
+          <i class="fa-solid fa-layer-group"></i> 
+          வகுப்பை தேர்வு செய்க (Select Class 6 to 12):
+        </div>
+        <div class="class-pill-list" id="classPillList">
+          <!-- Class 6 to 12 buttons dynamically inserted -->
+        </div>
+      </div>
+
+      <!-- Inside Each Class: Tabs for Notes, PYQs, Important Qs, Syllabus -->
+      <div class="content-tabs-nav" id="classContentTabs">
+        <button class="tab-nav-btn active" data-tab="chaptersTab">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Chapter-wise Notes (பாடக் குறிப்புகள்)</span>
+          <span class="tab-badge" id="chapterCountBadge">6</span>
+        </button>
+
+        <button class="tab-nav-btn" data-tab="pyqsTab">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Previous Year Papers 2019 - 2025 (முந்தைய ஆண்டு வினாத்தாள்கள்)</span>
+          <span class="tab-badge" id="pyqCountBadge">7</span>
+        </button>
+
+        <button class="tab-nav-btn" data-tab="importantTab">
+          <i class="fa-solid fa-star"></i>
+          <span>Important Questions (முக்கிய வினாக்கள்)</span>
+          <span class="tab-badge" id="importantBadge">Golden</span>
+        </button>
+
+        <button class="tab-nav-btn" data-tab="syllabusTab">
+          <i class="fa-solid fa-clipboard-list"></i>
+          <span>Syllabus & Blueprint (பாடத்திட்டம்)</span>
+        </button>
+      </div>
+
+      <!-- Tab 1: Chapter-wise Notes -->
+      <div class="tab-content-panel active" id="chaptersTab">
+        <div class="chapters-grid" id="chaptersGrid">
+          <!-- Dynamic Chapter Cards with PDF Download button -->
+        </div>
+      </div>
+
+      <!-- Tab 2: Previous Year Question Papers (2019 to 2025) -->
+      <div class="tab-content-panel" id="pyqsTab">
+        <div class="pyq-header-notice">
+          <div class="pyq-notice-left">
+            <i class="fa-solid fa-award pyq-notice-icon"></i>
+            <div class="pyq-notice-text">
+              <h4>அரசு பொதுத்தேர்வு & மாதிரி வினாத்தாள்கள் (2019 - 2025)</h4>
+              <p>Practice with official board papers and verify with official SCERT answer keys.</p>
+            </div>
+          </div>
+          <button class="btn-ans-key" id="downloadAllPyqZipBtn" title="Download Question Papers Package">
+            <i class="fa-solid fa-file-zipper"></i> Download All (2019-2025)
+          </button>
+        </div>
+
+        <!-- Year wise filter buttons -->
+        <div class="pyq-year-filters" id="pyqYearFilters">
+          <button class="year-filter-btn active" data-year="all">All Years (2019-2025)</button>
+          <button class="year-filter-btn" data-year="2025">2025 Model</button>
+          <button class="year-filter-btn" data-year="2024">2024</button>
+          <button class="year-filter-btn" data-year="2023">2023</button>
+          <button class="year-filter-btn" data-year="2022">2022</button>
+          <button class="year-filter-btn" data-year="2021">2021 PTA</button>
+          <button class="year-filter-btn" data-year="2020">2020</button>
+          <button class="year-filter-btn" data-year="2019">2019</button>
+        </div>
+
+        <div class="pyqs-table-card">
+          <div class="pyq-items-container" id="pyqItemsContainer">
+            <!-- Dynamically populated PYQ list 2019 to 2025 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Important Questions Section -->
+      <div class="tab-content-panel" id="importantTab">
+        <div class="important-section-wrap" id="importantSectionWrap">
+          <!-- Dynamic categorized 2 Marks, 3 Marks, 5 Marks, 8 Marks -->
+        </div>
+      </div>
+
+      <!-- Tab 4: Syllabus & Blueprint Section -->
+      <div class="tab-content-panel" id="syllabusTab">
+        <div class="syllabus-wrap" id="syllabusContentWrap">
+          <!-- Dynamically populated Syllabus & Marks Distribution -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Modal for Quick Read / Notes Preview / PDF Simulator -->
+  <div class="modal-overlay" id="contentModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <h3 id="modalTitle">Chapter Notes Preview</h3>
+          <p id="modalSubtitle">TN State Board • Samacheer Kalvi</p>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" title="Close Preview">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected dynamic formatted notes / formulas / paper -->
+      </div>
+      <div class="modal-footer">
+        <button class="action-btn" id="modalPrintBtn">
+          <i class="fa-solid fa-print"></i> Print Document
+        </button>
+        <button class="btn-download-pdf" id="modalDownloadPdfBtn">
+          <i class="fa-solid fa-file-arrow-down"></i> Download PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bookmarks Side Drawer / Modal -->
+  <div class="modal-overlay" id="bookmarksModal">
+    <div class="modal-box" style="max-width: 560px;">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <h3><i class="fa-solid fa-bookmark text-primary"></i> Saved Notes & Papers</h3>
+          <p>Your bookmarked chapters and question papers for quick exam revision.</p>
+        </div>
+        <button class="modal-close-btn" id="bookmarksCloseBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="bookmarksListBody">
+        <!-- Rendered bookmarks -->
+      </div>
+      <div class="modal-footer" style="justify-content: flex-end;">
+        <button class="action-btn" id="clearAllBookmarksBtn" style="color: var(--accent-red);">
+          <i class="fa-solid fa-trash-can"></i> Clear All Saved
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Toast Notification -->
+  <div class="toast-notice" id="toastNotice">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">PDF Download Started!</span>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <h3>Study<span>Notes</span> TN</h3>
+          <p>
+            தமிழ்நாடு பள்ளி மாணவர்களுக்காக உருவாக்கப்பட்ட இலவச கல்வித் தளம். 6 முதல் 12-ஆம் வகுப்பு வரையிலான அனைத்து பாடங்களின் குறிப்புகள், 2019-2025 முந்தைய ஆண்டு வினாத்தாள்கள் மற்றும் முக்கியமான வினாக்கள் ஒரே இடத்தில்!
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>வகுப்புகள் (Classes)</h4>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="app.selectClassAndSubject('maths', '10')">Class 10 (SSLC)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.selectClassAndSubject('maths', '12')">Class 12 (HSC +2)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.selectClassAndSubject('maths', '11')">Class 11 (HSC +1)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.selectClassAndSubject('maths', '9')">Class 9</a></li>
+            <li><a href="javascript:void(0)" onclick="app.selectClassAndSubject('maths', '8')">Class 6, 7 & 8</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>பாடங்கள் (Subjects)</h4>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="app.openSubject('physics')">இயற்பியல் (Physics)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openSubject('chemistry')">வேதியியல் (Chemistry)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openSubject('cs')">கணினி அறிவியல் (Computer Sci)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openSubject('maths')">கணிதம் (Mathematics)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openSubject('tamil')">தமிழ் (Tamil)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openSubject('english')">English</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>முக்கிய அம்சங்கள்</h4>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="app.openTab('pyqsTab')">2019 - 2025 வினாத்தாள்கள்</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openTab('importantTab')">முக்கிய 5 மதிப்பெண் வினாக்கள்</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openTab('chaptersTab')">அத்தியாய குறிப்புகள் (PDF)</a></li>
+            <li><a href="javascript:void(0)" onclick="app.openTab('syllabusTab')">புளூபிரிண்ட் & பாடத்திட்டம்</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 - 2026 StudyNotes TN. Dedicated to all Tamil Nadu School Students. 100% Free Education Portal.</p>
+        <p>சமச்சீர் கல்வித் திட்டம் • SCERT Tamil Nadu Curriculum</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
